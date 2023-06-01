@@ -14,7 +14,7 @@
 
 
 import numpy as np
-import SimpleITK as sitk
+import SimpleITK as sitk        # medical image(nifti/dicom file) processing library
 from dataset_utils import load_dataset, generate_patient_info
 import os
 from collections import OrderedDict
@@ -26,7 +26,7 @@ dataset_base_dir = "/media/fabian/My Book/datasets/ACDC/training/" # dataset as 
 results_folder_3D = "results/UNet3D_final"
 results_folder_2D = "results/results_segmentation_2D_new_dataset_ds_tmp_"
 patient_metrics = OrderedDict()
-patient_info = generate_patient_info(dataset_base_dir)
+patient_info = generate_patient_info(dataset_base_dir)      # return dictionary containing patient info such as 'ed', 'es, 'height', 'pathology', and 'weight'
 output_folder = "predicted_segmentations_train"
 if not os.path.isdir(output_folder):
     os.mkdir(output_folder)
