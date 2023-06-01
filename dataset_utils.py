@@ -138,7 +138,7 @@ def process_patient(args):
 
 def generate_patient_info(folder):
     patient_info={}
-    for id in range(151):
+    for id in range(151):   # dataset Train 100 + Test 50 = 150개
         fldr = os.path.join(folder, 'patient%03.0d'%id)
         if not os.path.isdir(fldr):
             print "could not find dir of patient ", id
